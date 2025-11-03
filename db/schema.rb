@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_11_03_170137) do
+ActiveRecord::Schema[8.0].define(version: 2025_11_03_183955) do
   create_table "posts", force: :cascade do |t|
-    t.string "title"
-    t.text "description"
+    t.string "title", null: false
+    t.text "description", null: false
     t.integer "upvotes", default: 0, null: false
     t.integer "downvotes", default: 0, null: false
-    t.boolean "is_bloggable"
+    t.boolean "is_bloggable", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
